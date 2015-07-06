@@ -20,6 +20,7 @@ export default (
     <Icon type='hamburger' />
     <Icon type='user' />
     <Icon type='magnifier' />
+    <Icon type='share' />
     <h1>Overwrite</h1>
     <Icon type='facebook' color='#BBFFCC' background="red" shape="square" />
     <Icon type='twitter' color='#BBFFCC' background="red" shape="square" />
@@ -37,5 +38,6 @@ export default (
     <Icon type='hamburger' color='#BBFFCC' background="red" shape="square" />
     <Icon type='user' color='#BBFFCC' background="red" shape="square" />
     <Icon type='magnifier' color='#BBFFCC' background="red" shape="square" />
+    <Icon type='share' color='#BBFFCC' background="red" shape="square" />
   </div>
 );

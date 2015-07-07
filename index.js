@@ -1,32 +1,35 @@
 import React from 'react';
-var IconLookup;
 
 export default class Icon extends React.Component {
 
-  propTypes: {
-    type: React.PropTypes.string.isRequired;
+  static get propTypes() {
+    return {
+      type: React.PropTypes.string.isRequired,
+      background: React.PropTypes.string,
+      shape: React.PropTypes.string,
+      color: React.PropTypes.string,
+      size: React.PropTypes.string,
+      id: React.PropTypes.string,
+      className: React.PropTypes.string,
+    };
   }
 
-  constructor(props) {
-    super(props);
-  }
-
-  static defaultProps = {
-    size: "0 0 1024 1024",
-    background: "#000000",
-    color: "#FFFFFF",
-    shape: 'circle',
-    id: ''
+  static get defaultProps() {
+    return {
+      size: '0 0 1024 1024',
+      background: '#000000',
+      color: '#FFFFFF',
+      shape: 'circle',
+      id: '',
+    };
   }
 
   render() {
-
     this.svgStyles = {
-        background: this.props.background,
-        borderRadius: (this.props.shape == 'circle' && this.props.type!=='logoWorldIF') ? '50%' : null
-    }
-
-    IconLookup = {
+      background: this.props.background,
+      borderRadius: (this.props.shape === 'circle' && this.props.type !== 'logoWorldIF') ? '50%' : null,
+    };
+    const iconLookup = {
       facebook: `<path fill=${this.props.color}  d="M621.658,510.189h-71.75c0,114.624,0,255.811,0,255.811H443.594c0,0,0-139.747,0-255.811H393.03 v-90.374h50.563v-58.499c0-41.875,19.875-107.315,107.28-107.315l78.752,0.314v87.75c0,0-47.875,0-57.158,0 c-9.312,0-22.56,4.624-22.56,24.624v53.126h81.062L621.658,510.189z"></path>`,
       twitter: `<path fill=${this.props.color}  d="M715.593,407.626c0.218,4.499,0.314,9.002,0.314,13.565c0,138.81-105.658,298.874-298.877,298.874
   c-59.344,0-114.531-17.376-161.03-47.187c8.249,0.938,16.595,1.437,25.062,1.437c49.251,0,94.499-16.749,130.438-44.938
@@ -72,11 +75,10 @@ export default class Icon extends React.Component {
       hamburger: `<rect x="257" y="351" fill=${this.props.color}  style="fill-rule:evenodd;clip-rule:evenodd;" width="507" height="56"/><rect x="257" y="484" fill=${this.props.color}  style="fill-rule:evenodd;clip-rule:evenodd;" width="507" height="56"/><rect x="257" y="620" fill=${this.props.color}  style="fill-rule:evenodd;clip-rule:evenodd;" width="507" height="56"/>`,
       user: `<path fill=${this.props.color}  d="M573.723,610.199c-12.215-1.943-12.49-35.533-12.49-35.533s35.888-35.531,43.711-83.311 c21.047,0,34.044-50.794,12.998-68.669C618.821,403.873,644.992,275,512.5,275c-132.493,0-106.322,128.873-105.448,147.686 c-21.04,17.875-8.049,68.669,12.997,68.669c7.823,47.779,43.717,83.311,43.717,83.311s-0.28,33.589-12.495,35.533 C411.924,616.462,265,681.263,265,752.327h495C760,681.263,613.075,616.462,573.723,610.199L573.723,610.199z M573.723,610.199"></path>`,
       magnifier: `<path fill=${this.props.color}  d="M742.734,687.092L628.861,590.24c-11.77-10.59-24.358-15.455-34.527-14.987 c26.879-31.488,43.114-72.332,43.114-116.977c0-99.565-80.712-180.278-180.272-180.278c-99.565,0-180.278,80.713-180.278,180.278 c0,99.56,80.713,180.272,180.278,180.272c44.645,0,85.489-16.234,116.977-43.118c-0.468,10.173,4.397,22.762,14.987,34.532 l96.851,113.868c16.583,18.427,43.669,19.981,60.196,3.458C762.71,730.76,761.156,703.673,742.734,687.092L742.734,687.092z M457.176,578.458c-66.377,0-120.187-53.81-120.187-120.182c0-66.377,53.81-120.187,120.187-120.187 c66.371,0,120.182,53.81,120.182,120.187C577.357,524.647,523.551,578.458,457.176,578.458L457.176,578.458z M457.176,578.458"></path>`,
-      share: `<path fill=${this.props.color} d="M848.5 294.5c0 33.1-11.7 61-35.2 83.8-23.1 23.4-51 35.2-83.8 35.2-27.9 0-53.3-9.5-76.1-28.4L412.7 505.4l1 7.2-1 6.3 240.8 120.8c22.2-18.9 47.5-28.4 76.1-28.4 32.7 0 60.7 11.4 83.8 34.2 23.4 23.4 35.2 51.5 35.2 84.3 0 32.7-11.7 60.9-35.2 84.3-23.1 23.1-51 34.6-83.8 34.6-32.7 0-60.7-11.5-83.8-34.6-23.1-23.4-34.6-51.5-34.6-84.3l.5-6.7-241.4-120.4c-22.2 18.6-47.5 27.9-76.1 27.9-32.7 0-60.7-11.5-83.8-34.7-23.1-22.8-34.7-50.6-34.7-83.4 0-33.1 11.6-61.1 34.7-84.3 23.1-23.1 51-34.6 83.8-34.6 28.6 0 53.9 9.5 76.1 28.4l241.3-120.8-.5-6.7c0-32.4 11.5-60.3 34.6-83.8 23.1-23.1 51-34.6 83.8-34.6s60.7 11.5 83.8 34.6c23.6 23.4 35.2 51.3 35.2 83.8z"></path>`
+      share: `<path fill=${this.props.color} d="M848.5 294.5c0 33.1-11.7 61-35.2 83.8-23.1 23.4-51 35.2-83.8 35.2-27.9 0-53.3-9.5-76.1-28.4L412.7 505.4l1 7.2-1 6.3 240.8 120.8c22.2-18.9 47.5-28.4 76.1-28.4 32.7 0 60.7 11.4 83.8 34.2 23.4 23.4 35.2 51.5 35.2 84.3 0 32.7-11.7 60.9-35.2 84.3-23.1 23.1-51 34.6-83.8 34.6-32.7 0-60.7-11.5-83.8-34.6-23.1-23.4-34.6-51.5-34.6-84.3l.5-6.7-241.4-120.4c-22.2 18.6-47.5 27.9-76.1 27.9-32.7 0-60.7-11.5-83.8-34.7-23.1-22.8-34.7-50.6-34.7-83.4 0-33.1 11.6-61.1 34.7-84.3 23.1-23.1 51-34.6 83.8-34.6 28.6 0 53.9 9.5 76.1 28.4l241.3-120.8-.5-6.7c0-32.4 11.5-60.3 34.6-83.8 23.1-23.1 51-34.6 83.8-34.6s60.7 11.5 83.8 34.6c23.6 23.4 35.2 51.3 35.2 83.8z"></path>`,
     };
-
     return (
-      <svg className={this.props.className} style={this.svgStyles} id={this.props.id} viewBox={this.props.size} dangerouslySetInnerHTML={{__html: IconLookup[this.props.type]}} />
+      <svg className={this.props.className} style={this.svgStyles} id={this.props.id} viewBox={this.props.size} dangerouslySetInnerHTML={{ __html: iconLookup[this.props.type] }} />
     );
   }
 }

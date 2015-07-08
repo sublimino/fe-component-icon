@@ -1,4 +1,5 @@
 svg {
   width: 60px;
   height: 60px;
+  fill: var(--Icon--fill-color, red);
 }

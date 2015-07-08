@@ -1,1 +1,1 @@
-describe("A suite", function() {});
+describe('A suite', () => {});

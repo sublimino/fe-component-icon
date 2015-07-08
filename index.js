@@ -22,7 +22,7 @@ export default class Icon extends React.Component {
   render() {
 
     this.svgStyles = {
-        background: this.props.background,
+        background: (this.props.type === 'logoWorldIF') ? '#33BDEB' : this.props.background,
         borderRadius: (this.props.shape == 'circle' && this.props.type!=='logoWorldIF') ? '50%' : null
     }
 
@@ -67,7 +67,7 @@ export default class Icon extends React.Component {
       up: `<path fill=${this.props.color}  d="M512.7 299.8l357.7 345.8-64.1 77.6L512.7 455 220.9 723.2l-64.1-77.6 355.9-345.8z"></path>`,
       right: `<path fill=${this.props.color}   d="M725.3 510.6L379.5 868.3l-77.6-64.1 268.2-293.6-268.2-291.8 77.6-64.1 345.8 355.9z"></path>`,
       left: `<path fill=${this.props.color} d="M301.9 512.4l345.8-357.7 77.6 64.1-268.2 293.6 268.2 291.8-77.6 64.1-345.8-355.9z"></path>`,
-      logoWorldIF: `<path fill="#33BDEB" d="M0 0h1024v1024H0z"/><path fill="#FFFFFF" d="M227.4 239.5h66.9v555.1h-66.9V239.5zM309 794.6V239.5h66.9v555.1H309zM446.2 239.5h377.1V295H513.2v499.6h-66.9V239.5zm350.2 293.1H527.9V309.7h295.5v54.7H594.8v112.7h201.6v55.5zm-268.5 262V547.3h268.6V602H594.8v192.6h-66.9z"/>`,
+      logoWorldIF: `<path fill="#FFFFFF" d="M227.4 239.5h66.9v555.1h-66.9V239.5zM309 794.6V239.5h66.9v555.1H309zM446.2 239.5h377.1V295H513.2v499.6h-66.9V239.5zm350.2 293.1H527.9V309.7h295.5v54.7H594.8v112.7h201.6v55.5zm-268.5 262V547.3h268.6V602H594.8v192.6h-66.9z"/>`,
       home: `<path fill=${this.props.color}  d="M870.5 564.4H790v304.3H572.5V680.5H451.6v188.2H234.2V564.4h-80.5l136.9-152.2V212h100.7v80.1l120.8-140.2 181.2 204.2c0 .1 177.2 208.3 177.2 208.3z"></path>`,
       hamburger: `<rect x="257" y="351" fill=${this.props.color}  style="fill-rule:evenodd;clip-rule:evenodd;" width="507" height="56"/><rect x="257" y="484" fill=${this.props.color}  style="fill-rule:evenodd;clip-rule:evenodd;" width="507" height="56"/><rect x="257" y="620" fill=${this.props.color}  style="fill-rule:evenodd;clip-rule:evenodd;" width="507" height="56"/>`,
       user: `<path fill=${this.props.color}  d="M573.723,610.199c-12.215-1.943-12.49-35.533-12.49-35.533s35.888-35.531,43.711-83.311 c21.047,0,34.044-50.794,12.998-68.669C618.821,403.873,644.992,275,512.5,275c-132.493,0-106.322,128.873-105.448,147.686 c-21.04,17.875-8.049,68.669,12.997,68.669c7.823,47.779,43.717,83.311,43.717,83.311s-0.28,33.589-12.495,35.533 C411.924,616.462,265,681.263,265,752.327h495C760,681.263,613.075,616.462,573.723,610.199L573.723,610.199z M573.723,610.199"></path>`,

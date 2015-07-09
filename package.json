@@ -27,10 +27,10 @@
     "lint_opts": "--ignore-path .gitignore"
   },
   "eslintConfig": {
-    "extends": "strict/react"
+    "extends": "strict"
   },
   "scripts": {
-    "lint": "eslint $npm_package_config_lint_opts .",
+    "lint": "eslint .",
     "postinstall": "devpack-configure ./package.json",
     "preinstall": "",
     "prepublish": "browserify -u react -d index.js -p [minifyify --output bundle.map.json] > bundle.js",
@@ -44,13 +44,13 @@
   },
   "devDependencies": {
     "@economist/component-devpack": "^1.7.1",
-    "@economist/component-devserver": "^1.6.1",
-    "@economist/component-testharness": "^1.1.0",
+    "@economist/component-devserver": "^1.5.1",
+    "@economist/component-testharness": "^1.0.0",
     "babel": "^5.5.8",
     "babelify": "^6.1.2",
     "browserify": "^10.2.4",
-    "eslint": "^0.24.0",
-    "eslint-config-strict": "^2.4.0",
+    "eslint": "^0.23.0",
+    "eslint-config-strict": "^2.0.0",
     "eslint-plugin-filenames": "^0.1.1",
     "eslint-plugin-one-variable-per-var": "^0.0.3",
     "eslint-plugin-react": "^2.6.3",

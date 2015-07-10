@@ -25,15 +25,17 @@ export default class Icon extends React.Component {
   }
 
   render() {
-    this.svgStyles = {
-        background: (this.props.type === 'logoWorldIF') ? '#33BDEB' : this.props.background,
-        borderRadius: (this.props.shape == 'circle' && this.props.type!=='logoWorldIF') ? '50%' : null,
-    }
-    if(this.props.type === 'logoEconomist'){
-      this.props.size = '0 0 144 72';
-      this.props.square = 'square';
-      this.svgStyles.height = 'auto';
-      this.svgStyles.borderRadius = 'none';
+    // TODO
+    // This part need to be reviewed
+    if(this.props.type == 'logoEconomist' || this.props.type == 'logoEconomistSmall' ){
+      this.svgStyles = {
+          background: 'none',
+      }
+    } else {
+      this.svgStyles = {
+          background: (this.props.type === 'logoWorldIF') ? '#33BDEB' : this.props.background,
+          borderRadius: (this.props.shape == 'circle' && this.props.type!=='logoWorldIF' && this.props.type!=='logoEconomist' && this.props.type!=='logoEconomistSmall') ? '50%' : null,
+      }
     }
 
     const iconLookup = {

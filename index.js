@@ -33,6 +33,7 @@ export default class Icon extends React.Component {
       this.props.size = '0 0 144 72';
       this.props.square = 'square';
       this.svgStyles.height = 'auto';
+      this.svgStyles.borderRadius = 'none';
     }
 
     const iconLookup = {

@@ -40,6 +40,6 @@ export default (
     <Icon type="magnifier" color="#BBFFCC" background="red" shape="square" />
     <Icon type="share" color="#BBFFCC" background="red" shape="square" />
     <Icon type="logoEconomistSmall" shape="square"/>
-    <Icon type="logoEconomist" shape="square"/>
+    <Icon type="logoEconomist"/>
   </div>
 );

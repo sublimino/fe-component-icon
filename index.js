@@ -31,6 +31,7 @@ export default class Icon extends React.Component {
     }
     if(this.props.type === 'logoEconomist'){
       this.props.size = '0 0 144 72';
+      this.props.square = 'square';
       this.svgStyles.height = 'auto';
     }
 

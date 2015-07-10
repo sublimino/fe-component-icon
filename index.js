@@ -27,7 +27,12 @@ export default class Icon extends React.Component {
   render() {
     // TODO
     // This part need to be reviewed
-    if(this.props.type == 'logoEconomist' || this.props.type == 'logoEconomistSmall' ){
+    if(this.props.type == 'logoEconomist'){
+      this.svgStyles = {
+          background: 'none',
+          width: '112px',
+      }
+    } else if(this.props.type == 'logoEconomistSmall'){
       this.svgStyles = {
           background: 'none',
       }

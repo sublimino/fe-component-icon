@@ -26,6 +26,11 @@
   "assets": [
     "icons.svg"
   ],
+  "files": [
+    "index.js",
+    "icons.svg",
+    "index.css"
+  ],
   "eslintConfig": {
     "extends": "strict/react"
   },

@@ -4,42 +4,44 @@ import Icon from './index.es6';
 export default (
   <div>
     <h1>Default values</h1>
-    <Icon type="facebook" />
-    <Icon type="twitter" />
-    <Icon type="googleplus" />
-    <Icon type="linkedin" />
-    <Icon type="whatsapp" />
-    <Icon type="mail" />
-    <Icon type="rss" />
-    <Icon type="down" />
-    <Icon type="up" />
-    <Icon type="right" />
-    <Icon type="left" />
-    <Icon type="worldif" />
-    <Icon type="home" />
-    <Icon type="hamburger" />
-    <Icon type="user" />
-    <Icon type="magnifier" />
-    <Icon type="share" />
+    <Icon icon="facebook" />
+    <Icon icon="twitter" />
+    <Icon icon="googleplus" />
+    <Icon icon="linkedin" />
+    <Icon icon="whatsapp" />
+    <Icon icon="mail" />
+    <Icon icon="rss" />
+    <Icon icon="down" />
+    <Icon icon="up" />
+    <Icon icon="right" />
+    <Icon icon="left" />
+    <Icon icon="worldif" />
+    <Icon icon="home" />
+    <Icon icon="hamburger" />
+    <Icon icon="user" />
+    <Icon icon="magnifier" />
+    <Icon icon="share" />
+    <Icon icon="economist-small"/>
+    <Icon icon="economist"/>
     <h1>Overwrite</h1>
-    <Icon type="facebook" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="twitter" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="googleplus" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="linkedin" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="whatsapp" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="mail" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="rss" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="down" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="up" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="right" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="left" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="worldif" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="home" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="hamburger" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="user" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="magnifier" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="share" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="economist-small" shape="square"/>
-    <Icon type="economist" shape="square" size="0 0 144 72"/>
+    <Icon className="rounded" icon="facebook" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="twitter" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="googleplus" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="linkedin" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="whatsapp" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="mail" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="rss" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="down" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="up" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="right" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="left" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="worldif" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="home" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="hamburger" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="user" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="magnifier" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="share" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="economist-small" background="white"/>
+    <Icon icon="economist" size="200px" background="white"/>
   </div>
 );

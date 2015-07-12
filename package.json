@@ -38,6 +38,7 @@
     "example": "./example.es6",
     "css": [
       "/node_modules/mocha/mocha.css",
+      "/example.css",
       "/index.css"
     ],
     "js": [

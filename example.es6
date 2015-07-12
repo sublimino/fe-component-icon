@@ -1,5 +1,5 @@
-import Icon from './index';
 import React from 'react';
+import Icon from './index.es6';
 
 export default (
   <div>

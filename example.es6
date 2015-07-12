@@ -15,7 +15,7 @@ export default (
     <Icon type="up" />
     <Icon type="right" />
     <Icon type="left" />
-    <Icon type="logoWorldIF" />
+    <Icon type="worldif" />
     <Icon type="home" />
     <Icon type="hamburger" />
     <Icon type="user" />
@@ -33,17 +33,13 @@ export default (
     <Icon type="up" color="#BBFFCC" background="red" shape="square" />
     <Icon type="right" color="#BBFFCC" background="red" shape="square" />
     <Icon type="left" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="logoWorldIF" color="#BBFFCC" background="red" shape="square" />
+    <Icon type="worldif" color="#BBFFCC" background="red" shape="square" />
     <Icon type="home" color="#BBFFCC" background="red" shape="square" />
     <Icon type="hamburger" color="#BBFFCC" background="red" shape="square" />
     <Icon type="user" color="#BBFFCC" background="red" shape="square" />
     <Icon type="magnifier" color="#BBFFCC" background="red" shape="square" />
     <Icon type="share" color="#BBFFCC" background="red" shape="square" />
-    <Icon type="logoEconomistSmall" shape="square"/>
-    <Icon
-    type="logoEconomist"
-    shape="square"
-    size="0 0 144 72"
-    />
+    <Icon type="economist-small" shape="square"/>
+    <Icon type="economist" shape="square" size="0 0 144 72"/>
   </div>
 );

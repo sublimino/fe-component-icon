@@ -4,4 +4,4 @@ node_modules/
 bundle.*
 /node_modules
 bundle.js
-
+icons.svg

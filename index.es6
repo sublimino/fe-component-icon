@@ -9,11 +9,13 @@ export default class Icon extends React.Component {
       color: React.PropTypes.string,
       size: React.PropTypes.string,
       className: React.PropTypes.string,
+      uri: React.PropTypes.string,
     };
   }
 
   static get defaultProps() {
     return {
+      uri: '/assets/icons.svg',
       background: 'black',
       color: '#FFFFFF',
       size: '60px',
@@ -28,7 +30,7 @@ export default class Icon extends React.Component {
       >
         <svg role="img"
           style={{ fill: this.props.color }}
-          dangerouslySetInnerHTML={{ __html: `<use xlink:href="/icons.svg#${this.props.icon}"/>` }}/>
+          dangerouslySetInnerHTML={{ __html: `<use xlink:href="${this.props.uri}#${this.props.icon}"/>` }}/>
       </i>
     );
   }

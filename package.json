@@ -24,12 +24,12 @@
     ]
   },
   "assets": [
-    "icons.svg"
+    "assets/icons.svg"
   ],
   "files": [
     "index.js",
-    "icons.svg",
-    "index.css"
+    "index.css",
+    "assets/icons.svg"
   ],
   "eslintConfig": {
     "extends": "strict/react"
@@ -76,7 +76,7 @@
   "scripts": {
     "lint": "eslint $npm_package_config_lint_opts .",
     "clean-svg": "svgo --pretty --config=.svgo.yml -f icons -o icons",
-    "build": "svg-sprite -l \"verbose\" --symbol-dest . --ss icons.svg -s icons/*",
+    "build": "svg-sprite -l \"verbose\" --symbol-dest assets/ --ss icons.svg -s icons/*",
     "prepublish": "npm run build && babel index.es6 --stage=0 --loose > index.js",
     "provision": "devpack-configure ./package.json",
     "serve": "component-devserver .",

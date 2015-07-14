@@ -13,16 +13,6 @@
     "url": "https://github.com/the-economist-editorial/icon/issues"
   },
   "main": "index.js",
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "stage": 0
-        }
-      ]
-    ]
-  },
   "assets": [
     "assets/icons.svg"
   ],
@@ -92,8 +82,6 @@
     "@economist/component-devserver": "^2.0.0",
     "@economist/component-testharness": "^1.1.0",
     "babel": "^5.5.8",
-    "babelify": "^6.1.2",
-    "browserify": "^10.2.4",
     "eslint": "^0.24.0",
     "eslint-config-strict": "^2.4.0",
     "eslint-plugin-filenames": "^0.1.1",

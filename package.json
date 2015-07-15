@@ -13,13 +13,10 @@
     "url": "https://github.com/the-economist-editorial/icon/issues"
   },
   "main": "index.js",
-  "assets": [
-    "assets/icons.svg"
-  ],
   "files": [
-    "index.js",
-    "index.css",
-    "assets/icons.svg"
+    "*.js",
+    "*.css",
+    "assets/*"
   ],
   "eslintConfig": {
     "extends": "strict/react"
@@ -28,7 +25,6 @@
     "example": "./example.es6",
     "css": [
       "/node_modules/mocha/mocha.css",
-      "/example.css",
       "/index.css"
     ],
     "js": [
@@ -49,7 +45,7 @@
       {
         "contents": "chai.should();mocha.setup('bdd');"
       },
-      "/test/index.es6?debug&external=react",
+      "/test/index.es6?babelify&debug&external=react",
       {
         "contents": "mocha.checkLeaks();mocha.run();"
       }
@@ -64,10 +60,10 @@
     "lint_opts": "--ignore-path .gitignore --ext .es6"
   },
   "scripts": {
-    "lint": "eslint $npm_package_config_lint_opts .",
-    "clean-svg": "svgo --pretty --config=.svgo.yml -f icons -o icons",
     "build": "svg-sprite -l \"verbose\" --symbol-dest assets/ --ss icons.svg -s icons/*",
-    "prepublish": "npm run build && babel index.es6 --stage=0 --loose > index.js",
+    "clean-svg": "svgo --pretty --config=.svgo.yml -f icons -o icons",
+    "lint": "eslint $npm_package_config_lint_opts .",
+    "prepublish": "babel index.es6 --stage=0 --loose > index.js",
     "provision": "devpack-configure ./package.json",
     "serve": "component-devserver .",
     "test": "npm run test:base -- -R tap",
@@ -78,7 +74,7 @@
     "react": "^0.13.3"
   },
   "devDependencies": {
-    "@economist/component-devpack": "^2.1.1",
+    "@economist/component-devpack": "^2.3.0",
     "@economist/component-devserver": "^2.0.0",
     "@economist/component-testharness": "^1.1.0",
     "babel": "^5.5.8",
@@ -92,6 +88,9 @@
     "pre-commit": "^1.0.10",
     "svg-sprite": "^1.2.5"
   },
+  "assets": [
+    "assets/icons.svg"
+  ],
   "pre-commit": [
     "lint"
   ]

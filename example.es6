@@ -15,6 +15,7 @@ export default (
     <Icon icon="up" />
     <Icon icon="right" />
     <Icon icon="left" />
+    <Icon icon="close" />
     <Icon icon="worldif" />
     <Icon icon="home" />
     <Icon icon="hamburger" />
@@ -34,6 +35,8 @@ export default (
     <Icon className="rounded" icon="down" color="#BBFFCC" background="red" />
     <Icon className="rounded" icon="up" color="#BBFFCC" background="red" />
     <Icon className="rounded" icon="right" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="right" color="#BBFFCC" background="red" />
+    <Icon className="rounded" icon="close" color="#BBFFCC" background="red" />
     <Icon className="rounded" icon="left" color="#BBFFCC" background="red" />
     <Icon className="rounded" icon="worldif" color="#BBFFCC" background="red" />
     <Icon className="rounded" icon="home" color="#BBFFCC" background="red" />

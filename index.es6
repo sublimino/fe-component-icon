@@ -48,7 +48,7 @@ export default class Icon extends React.Component {
           __html: '<use ' +
             'xmlns:xlink="http://www.w3.org/1999/xlink" ' +
             `xlink:href="${this.props.uri}#${this.props.icon}"` +
-          '/>',
+          '></use>',
         }}
       />
     );

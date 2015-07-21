@@ -46,7 +46,7 @@ export default class Icon extends React.Component {
         dangerouslySetInnerHTML={{
           // use string literals here to avoid extraneous newlinw chars
           __html: '<use ' +
-            'xmlns:xlink="http://www.w3.org/1999/xlink"' +
+            'xmlns:xlink="http://www.w3.org/1999/xlink" ' +
             `xlink:href="${this.props.uri}#${this.props.icon}"` +
           '/>',
         }}

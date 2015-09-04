@@ -64,7 +64,7 @@
     "build": "svg-sprite -l \"verbose\" --symbol-dest assets/ --ss icons.svg -s icons/*",
     "clean-svg": "svgo --pretty --config=.svgo.yml -f icons -o icons",
     "lint": "eslint $npm_package_config_lint_opts .",
-    "prepublish": "babel index.es6 --stage=0 --loose > index.js",
+    "prepublish": "npm run build && babel . -d . -x .es6",
     "provision": "devpack-configure ./package.json",
     "serve": "component-devserver .",
     "test": "npm run test:base -- -R tap",

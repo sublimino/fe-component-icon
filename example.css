@@ -1,0 +1,7 @@
+.Icon.rounded {
+  border-radius: 50%;
+}
+
+#component-preview {
+  margin: 0 30px;
+}

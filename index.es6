@@ -43,8 +43,10 @@ export default class Icon extends React.Component {
         style={{
           background: this.props.background,
         }}
+        /* eslint react/no-danger: 0*/
         dangerouslySetInnerHTML={{
           // use string literals here to avoid extraneous newlinw chars
+        /* eslint id-match: 0*/
           __html: '<use ' +
             'xmlns:xlink="http://www.w3.org/1999/xlink" ' +
             `xlink:href="${this.props.uri}#${this.props.icon}"` +
